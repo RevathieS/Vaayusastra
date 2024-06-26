@@ -13,7 +13,7 @@ app.use(cors());
 // Connect to MongoDB
 mongoose.connect('mongodb://localhost:27017/login_demo', { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB connected...'))
-  .catch(err => console.log(err));
+  .catch(err => console.error('MongoDB connection error:', err));
 
 // User Schema
 const UserSchema = new mongoose.Schema({
@@ -57,6 +57,7 @@ app.post('/login', async (req, res) => {
   }
 });
 
-app.listen(port, () => {
-  console.log('Server running on port ${port}');
+// Start the server
+app.listen(port, '192.168.1.194', () => {
+  console.log("Server running on http://192.168.1.194:${port}");
 });

@@ -67,7 +67,7 @@ class _LoginPageState extends State<LoginPage> {
 
     try {
       final response = await http.post(
-        Uri.parse('http://localhost:3000/login'), // Use localhost for web
+        Uri.parse('http://192.168.1.194:3000/login'), // Use your IP address
         headers: <String, String>{
           'Content-Type': 'application/json; charset=UTF-8',
         },
@@ -258,8 +258,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
           ],
         ),
-     ),
+),
 );
 }
 }
-

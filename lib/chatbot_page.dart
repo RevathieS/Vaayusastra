@@ -9,7 +9,9 @@ class ChatbotPage extends StatefulWidget {
 
 class _ChatbotPageState extends State<ChatbotPage> {
   final TextEditingController _textController = TextEditingController();
-  List<Map<String, dynamic>> messages = [];
+  List<Map<String, dynamic>> messages = [
+    {'text': "Hi, How can I help you?", 'isUser': false},
+  ];
 
   Map<String, String> responses = {
     "hi": "Hello! How can I help you?",
@@ -23,9 +25,9 @@ class _ChatbotPageState extends State<ChatbotPage> {
 
   void sendMessage(String message) {
     setState(() {
-      messages.insert(0, {'text': message, 'isUser': true}); // Insert message at the beginning
+      messages.insert(0, {'text': message, 'isUser': true});
       String response = getResponse(message);
-      messages.insert(0, {'text': response, 'isUser': false}); // Insert response at the beginning
+      messages.insert(0, {'text': response, 'isUser': false});
     });
   }
 
@@ -43,13 +45,13 @@ class _ChatbotPageState extends State<ChatbotPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Chatbot'), // Display app bar title only once
+        title: const Text('Chatbot'),
       ),
       body: Column(
         children: <Widget>[
           Expanded(
             child: ListView.builder(
-              reverse: true, // Show messages in reverse order
+              reverse: true,
               itemCount: messages.length,
               itemBuilder: (context, index) {
                 return Padding(

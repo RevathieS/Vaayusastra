@@ -14,7 +14,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   _navigateToLogin() async {
-    await Future.delayed(Duration(milliseconds: 1500), () {});
+    await Future.delayed(Duration(seconds: 2), () {});
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(builder: (context) => MyApp()),
@@ -25,7 +25,10 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text('Splash Screen', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+        child: Image.asset(
+          'assets/splash.jpeg',
+          fit: BoxFit.cover, // You can adjust this based on your needs
+        ),
       ),
     );
   }

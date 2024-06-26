@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'payment_options_page.dart'; // Import the PaymentOptionsPage widget
+import 'package:url_launcher/url_launcher.dart'; // Import the url_launcher package
 
 class DescriptionPage extends StatelessWidget {
   final String level;
   final Color color;
+  final String driveLink = 'https://drive.google.com/your-drive-link'; // Replace with your actual drive link
 
   const DescriptionPage({super.key, required this.level, required this.color});
 
@@ -32,6 +34,19 @@ class DescriptionPage extends StatelessWidget {
                 );
               },
               child: const Text('Purchase'),
+            ),
+            const SizedBox(height: 20),
+            TextButton(
+              onPressed: () async {
+                // Open the drive link when the button is pressed
+                final Uri url = Uri.parse(driveLink);
+                if (await canLaunch(url.toString())) {
+                  await launch(url.toString());
+                } else {
+                  throw 'Could not launch $driveLink';
+                }
+              },
+              child: const Text('Open Drive Link'),
             ),
           ],
         ),

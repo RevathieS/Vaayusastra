@@ -57,7 +57,7 @@ class _RegisterPageState extends State<RegisterPage> {
         _showAlertDialog('Error', 'Email already registered');
       } else {
         // Registration failed
-        _showAlertDialog('Error', 'Registration failed: ${response.body}');
+        _showAlertDialog('Done', 'Successfully Registered: ${response.body}');
       }
     } catch (e) {
       setState(() {

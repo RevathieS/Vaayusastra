@@ -36,19 +36,19 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               children: [
                 _buildPageContent(
                   backgroundColor: Colors.blue,
-                  image: 'assets/slide1.png',
+                  image: 'assets/splash.jpeg',
                   title: 'Welcome',
                   description: 'Welcome to Vaayusastra app. Let\'s get started!',
                 ),
                 _buildPageContent(
                   backgroundColor: Colors.green,
-                  image: 'assets/slide2.png',
+                  image: 'assets/splash2.jpeg',
                   title: 'App uses',
                   description: 'We offer various types of courses for different age groups.',
                 ),
                 _buildPageContent(
                   backgroundColor: Colors.orange,
-                  image: 'assets/slide3.png',
+                  image: 'assets/splash3.jpeg',
                   title: 'Discover More',
                   description: 'Explore various features and functionalities.',
                 ),

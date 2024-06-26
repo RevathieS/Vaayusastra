@@ -33,6 +33,7 @@ dependencies:
   http: ^1.2.1
   google_sign_in: ^5.2.1
   shared_preferences: ^2.0.6
+  url_launcher: ^6.0.20
   
 
   # The following adds the Cupertino Icons font to your application.
@@ -56,7 +57,9 @@ dev_dependencies:
 # The following section is specific to Flutter packages.
 flutter:
   assets:
-    - assets/splash.jpeg  # Adjust the path and filename as per your image
+    - assets/splash.jpeg
+    - assets/splash2.jpeg 
+    - assets/splash3.jpeg # Adjust the path and filename as per your image
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
