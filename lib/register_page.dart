@@ -31,7 +31,7 @@ class _RegisterPageState extends State<RegisterPage> {
 
     try {
       final response = await http.post(
-        Uri.parse('http://localhost:3000/register'), // Adjust URL if necessary
+        Uri.parse('http://192.168.1.195:3000/register'), // Adjust URL if necessary
         headers: <String, String>{
           'Content-Type': 'application/json; charset=UTF-8',
         },

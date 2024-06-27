@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'description_page.dart'; // Import the DescriptionPage widget
-import 'package:app/chatbot_page.dart'; // Import the ChatbotPage widget
+import 'package:Vaayusastra/chatbot_page.dart'; // Import the ChatbotPage widget
 
 class Catalogue2Page extends StatefulWidget {
   const Catalogue2Page({super.key});
