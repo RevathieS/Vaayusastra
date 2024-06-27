@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:app/main.dart'; // Replace 'your_app_name' with your actual app name
+import 'package:Vaayusastra/main.dart'; // Replace 'your_app_name' with your actual app name
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
