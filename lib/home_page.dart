@@ -7,7 +7,7 @@ import 'payment_options_page.dart';
 import 'main.dart'; // Import the main.dart file to navigate to the LoginPage
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -67,7 +67,26 @@ class HomePage extends StatelessWidget {
             // Navigate to home screen
             break;
           case 'About Us':
-            // Navigate to about us screen
+            // Show dialog with About Us content
+            showDialog(
+              context: context,
+              builder: (BuildContext context) => AlertDialog(
+                title: Text('About Us'),
+                content: SingleChildScrollView(
+                  child: Text(
+                    'VAAYUSASTRA AEROSPACE PRIVATE LIMITED, Incubated under IIT MADRAS\'S RTBI (Rural Technology Business Incubator), An Innovative Concept of Human Engineering services started with a motto of developing young talents through Aero Modelling workshops and science workshops for children combined with theatre arts like Story telling, Providing internships for the Engineering students and helping them in develop their idea.',
+                  ),
+                ),
+                actions: <Widget>[
+                  TextButton(
+                    child: Text('Close'),
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                    },
+                  ),
+                ],
+              ),
+            );
             break;
         }
       },
@@ -131,7 +150,7 @@ class HomePage extends StatelessWidget {
           value: 'Payment',
           child: Text('Payment'),
         ),
-     ],
-);
-}
+      ],
+    );
+  }
 }
